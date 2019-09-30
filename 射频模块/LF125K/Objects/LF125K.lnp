@@ -1,0 +1,19 @@
+--cpu Cortex-M3
+".\objects\fifo.o"
+".\objects\sys.o"
+".\objects\delay.o"
+".\objects\usart1.o"
+".\objects\main.o"
+".\objects\lf125k.o"
+".\objects\timer.o"
+".\objects\misc.o"
+".\objects\stm32f10x_gpio.o"
+".\objects\stm32f10x_rcc.o"
+".\objects\stm32f10x_tim.o"
+".\objects\stm32f10x_usart.o"
+".\objects\startup_stm32f10x_hd.o"
+".\objects\system_stm32f10x.o"
+--strict --scatter ".\Objects\LF125K.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\LF125K.map" -o .\Objects\LF125K.axf

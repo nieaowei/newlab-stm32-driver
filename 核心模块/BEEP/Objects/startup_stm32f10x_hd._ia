@@ -1,0 +1,8 @@
+--cpu Cortex-M3 -g --apcs=interwork 
+-I.\RTE\Device\STM32F103VE
+-I.\RTE\_BEEP
+-IC:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include
+-IC:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include
+-IC:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc
+--pd "__UVISION_VERSION SETA 528" --pd "_RTE_ SETA 1" --pd "STM32F10X_HD SETA 1"
+--list .\listings\startup_stm32f10x_hd.lst --xref -o .\objects\startup_stm32f10x_hd.o --depend .\objects\startup_stm32f10x_hd.d "RTE\Device\STM32F103VE\startup_stm32f10x_hd.s"
