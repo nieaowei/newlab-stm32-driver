@@ -71,6 +71,7 @@ uint16_t FIFO_Out_Byte(FIFO_Type *FIFO,Byte *byte){
 		FIFO->is_full=0;
 	}
 	*byte=FIFO->data[FIFO->out&FIFO_MASK];
+	FIFO->data[FIFO->out&FIFO_MASK]=0;
 	FIFO->out++;
 	return FIFO->out&FIFO_MASK;
 }
