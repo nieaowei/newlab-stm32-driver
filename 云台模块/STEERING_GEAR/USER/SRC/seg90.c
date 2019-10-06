@@ -62,23 +62,23 @@ void TIM3_pwm_init(void)
 	
   PrescalerValue = (uint16_t) (SystemCoreClock / 3000000) - 1;
   /* Time base configuration */
-  TIM_TimeBaseStructure.TIM_Period = TIM3_ARR;
-  TIM_TimeBaseStructure.TIM_Prescaler = PrescalerValue;
-  TIM_TimeBaseStructure.TIM_ClockDivision = 0;
-  TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
+  TIM_TimeBaseStructure.TIM_Period = TIM3_ARR;//设置自动重装在值
+  TIM_TimeBaseStructure.TIM_Prescaler = PrescalerValue;//设置预分频
+  TIM_TimeBaseStructure.TIM_ClockDivision = 0;//设置时钟分频
+  TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;//设置计数模式
 
-  TIM_TimeBaseInit(TIM3, &TIM_TimeBaseStructure);
+  TIM_TimeBaseInit(TIM3, &TIM_TimeBaseStructure);//初始化时基
 
   /* PWM1 Mode configuration: Channel1 */
 	
-  TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM1;
-  TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
-	TIM_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_High;
-  TIM_OCInitStructure.TIM_Pulse = CCR1_Val;
+  TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM1;//设置pwm1模式
+  TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;//设置输出使能
+	TIM_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_High;//设置输出极性
+  TIM_OCInitStructure.TIM_Pulse = CCR1_Val;//设置比较值
   
-  TIM_OC1Init(TIM3, &TIM_OCInitStructure);
+  TIM_OC1Init(TIM3, &TIM_OCInitStructure);//初始化输出比较寄存器
 
-  TIM_OC1PreloadConfig(TIM3, TIM_OCPreload_Enable);
+  TIM_OC1PreloadConfig(TIM3, TIM_OCPreload_Enable);//启用预分频预装载模式
 
   /* PWM1 Mode configuration: Channel2 */
   TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;

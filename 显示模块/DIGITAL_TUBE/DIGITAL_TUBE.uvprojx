@@ -7,7 +7,7 @@
 
   <Targets>
     <Target>
-      <TargetName>LCD12864</TargetName>
+      <TargetName>DIGITAL_TUBE</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>5060750::V5.06 update 6 (build 750)::ARMCC</pCCUsed>
@@ -18,7 +18,7 @@
           <Vendor>STMicroelectronics</Vendor>
           <PackID>Keil.STM32F1xx_DFP.2.3.0</PackID>
           <PackURL>http://www.keil.com/pack/</PackURL>
-          <Cpu>IRAM(0x20000000,0x10000) IROM(0x08000000,0x80000) CPUTYPE("Cortex-M3") CLOCK(12000000) ELITTLE</Cpu>
+          <Cpu>IRAM(0x20000000,0x00010000) IROM(0x08000000,0x00080000) CPUTYPE("Cortex-M3") CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
           <FlashDriverDll>UL2CM3(-S0 -C0 -P0 -FD20000000 -FC1000 -FN1 -FF0STM32F10x_512 -FS08000000 -FL080000 -FP0($$Device:STM32F103VE$Flash\STM32F10x_512.FLM))</FlashDriverDll>
@@ -49,10 +49,10 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\Objects\</OutputDirectory>
-          <OutputName>LCD12864</OutputName>
+          <OutputName>DIGITAL_TUBE</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
-          <CreateHexFile>1</CreateHexFile>
+          <CreateHexFile>0</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
           <ListingPath>.\Listings\</ListingPath>
@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\USER\SYSTEM;.\USER\INC</IncludePath>
+              <IncludePath>.\USER\USART;.\USER\SYSTEM;.\USER\INC</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -400,6 +400,16 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>USART</GroupName>
+          <Files>
+            <File>
+              <FileName>usart1.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USER\USART\usart1.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>USER</GroupName>
           <Files>
             <File>
@@ -410,12 +420,17 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>LCD12864</GroupName>
+          <GroupName>DIGITAL_TUBE</GroupName>
           <Files>
             <File>
-              <FileName>lcd12864.c</FileName>
+              <FileName>74HC595.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\USER\SRC\lcd12864.c</FilePath>
+              <FilePath>.\USER\SRC\74HC595.c</FilePath>
+            </File>
+            <File>
+              <FileName>digital_tube.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USER\SRC\digital_tube.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -432,34 +447,40 @@
   <RTE>
     <apis/>
     <components>
-      <component Cclass="CMSIS" Cgroup="CORE" Cvendor="ARM" Cversion="5.2.0" condition="ARMv6_7_8-M Device">
-        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.5.1"/>
+      <component Cclass="CMSIS" Cgroup="CORE" Cvendor="ARM" Cversion="5.3.0" condition="ARMv6_7_8-M Device">
+        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.6.0"/>
         <targetInfos>
-          <targetInfo name="LCD12864"/>
+          <targetInfo name="DIGITAL_TUBE"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="STM32F1xx CMSIS">
-        <package name="STM32F1xx_DFP" schemaVersion="1.4.0" url="http://www.keil.com/pack/" vendor="Keil" version="2.2.0"/>
+        <package name="STM32F1xx_DFP" schemaVersion="1.4.0" url="http://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
         <targetInfos>
-          <targetInfo name="LCD12864"/>
+          <targetInfo name="DIGITAL_TUBE"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="StdPeriph Drivers" Csub="Framework" Cvendor="Keil" Cversion="3.5.1" condition="STM32F1xx STDPERIPH">
-        <package name="STM32F1xx_DFP" schemaVersion="1.4.0" url="http://www.keil.com/pack/" vendor="Keil" version="2.2.0"/>
+        <package name="STM32F1xx_DFP" schemaVersion="1.4.0" url="http://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
         <targetInfos>
-          <targetInfo name="LCD12864"/>
+          <targetInfo name="DIGITAL_TUBE"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="StdPeriph Drivers" Csub="GPIO" Cvendor="Keil" Cversion="3.5.0" condition="STM32F1xx STDPERIPH RCC">
-        <package name="STM32F1xx_DFP" schemaVersion="1.4.0" url="http://www.keil.com/pack/" vendor="Keil" version="2.2.0"/>
+        <package name="STM32F1xx_DFP" schemaVersion="1.4.0" url="http://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
         <targetInfos>
-          <targetInfo name="LCD12864"/>
+          <targetInfo name="DIGITAL_TUBE"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="StdPeriph Drivers" Csub="RCC" Cvendor="Keil" Cversion="3.5.0" condition="STM32F1xx STDPERIPH">
-        <package name="STM32F1xx_DFP" schemaVersion="1.4.0" url="http://www.keil.com/pack/" vendor="Keil" version="2.2.0"/>
+        <package name="STM32F1xx_DFP" schemaVersion="1.4.0" url="http://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
         <targetInfos>
-          <targetInfo name="LCD12864"/>
+          <targetInfo name="DIGITAL_TUBE"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="StdPeriph Drivers" Csub="USART" Cvendor="Keil" Cversion="3.5.0" condition="STM32F1xx STDPERIPH RCC">
+        <package name="STM32F1xx_DFP" schemaVersion="1.4.0" url="http://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
+        <targetInfos>
+          <targetInfo name="DIGITAL_TUBE"/>
         </targetInfos>
       </component>
     </components>
@@ -469,7 +490,7 @@
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="STM32F1xx CMSIS"/>
         <package name="STM32F1xx_DFP" schemaVersion="1.4.0" url="http://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
         <targetInfos>
-          <targetInfo name="LCD12864"/>
+          <targetInfo name="DIGITAL_TUBE"/>
         </targetInfos>
       </file>
       <file attr="config" category="source" condition="STM32F1xx HD ARMCC" name="Device\Source\ARM\startup_stm32f10x_hd.s" version="1.0.0">
@@ -477,7 +498,7 @@
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="STM32F1xx CMSIS"/>
         <package name="STM32F1xx_DFP" schemaVersion="1.4.0" url="http://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
         <targetInfos>
-          <targetInfo name="LCD12864"/>
+          <targetInfo name="DIGITAL_TUBE"/>
         </targetInfos>
       </file>
       <file attr="config" category="source" name="Device\StdPeriph_Driver\templates\stm32f10x_conf.h" version="3.5.0">
@@ -485,7 +506,7 @@
         <component Cclass="Device" Cgroup="StdPeriph Drivers" Csub="Framework" Cvendor="Keil" Cversion="3.5.1" condition="STM32F1xx STDPERIPH"/>
         <package name="STM32F1xx_DFP" schemaVersion="1.4.0" url="http://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
         <targetInfos>
-          <targetInfo name="LCD12864"/>
+          <targetInfo name="DIGITAL_TUBE"/>
         </targetInfos>
       </file>
       <file attr="config" category="source" name="Device\Source\system_stm32f10x.c" version="1.0.0">
@@ -493,7 +514,7 @@
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="STM32F1xx CMSIS"/>
         <package name="STM32F1xx_DFP" schemaVersion="1.4.0" url="http://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
         <targetInfos>
-          <targetInfo name="LCD12864"/>
+          <targetInfo name="DIGITAL_TUBE"/>
         </targetInfos>
       </file>
     </files>
