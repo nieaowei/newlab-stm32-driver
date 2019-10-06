@@ -20,3 +20,4 @@
 .\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\main.o: .\USER\SYSTEM\fifo.h
 .\objects\main.o: .\USER\SYSTEM\delay.h
+.\objects\main.o: .\USER\INC\temp_light.h

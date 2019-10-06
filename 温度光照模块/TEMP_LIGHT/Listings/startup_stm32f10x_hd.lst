@@ -569,9 +569,9 @@ o -I.\RTE\Device\STM32F103VE -I.\RTE\_TEMP_LIGHT -IC:\Users\nieaowei\AppData\Lo
 cal\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include -IC:\Users\nieaowei\AppData\Lo
 cal\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include -IC:\Users\nieaowei\AppDa
 ta\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc --prede
-fine="__EVAL SETA 1" --predefine="__UVISION_VERSION SETA 528" --predefine="_RTE
-_ SETA 1" --predefine="STM32F10X_HD SETA 1" --list=.\listings\startup_stm32f10x
-_hd.lst RTE\Device\STM32F103VE\startup_stm32f10x_hd.s
+fine="__UVISION_VERSION SETA 528" --predefine="_RTE_ SETA 1" --predefine="STM32
+F10X_HD SETA 1" --list=.\listings\startup_stm32f10x_hd.lst RTE\Device\STM32F103
+VE\startup_stm32f10x_hd.s
 
 
 
@@ -1468,4 +1468,4 @@ Symbol: __use_two_region_memory
       None
 Comment: __use_two_region_memory unused
 3 symbols
-427 symbols in table
+426 symbols in table
