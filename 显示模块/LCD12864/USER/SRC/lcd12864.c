@@ -67,78 +67,78 @@ RS		->	DB2
 
 */
 //配置的定义，如果引脚有变动，修改一下配置即可
-#define LCD_BL_PIN			GPIO_Pin_7  //背光灯，0：使能，1：失能
+#define LCD_BL_PIN			GPIO_Pin_14  //背光灯，0：使能，1：失能
 #define LCD_BL_PORT			GPIOD //CS
-#define LCD_BL_CLK			RCC_APB2Periph_GPIOE
+#define LCD_BL_CLK			RCC_APB2Periph_GPIOD
 #define LCD_BL_INIT			LCD_BL_PORT,LCD_BL_PIN
 
-#define LCD_RST_PIN			GPIO_Pin_10	//复位，0：复位
+#define LCD_RST_PIN			GPIO_Pin_0	//复位，0：复位
 #define LCD_RST_PORT		GPIOD //
-#define LCD_RST_CLK			RCC_APB2Periph_GPIOE
+#define LCD_RST_CLK			RCC_APB2Periph_GPIOD
 #define LCD_RST_INIT		LCD_RST_PORT,LCD_RST_PIN
 
-#define LCD_CS2_PIN			GPIO_Pin_9	//芯片2选择，1：选择
-#define LCD_CS2_PORT		GPIOD
+#define LCD_CS2_PIN			GPIO_Pin_7	//芯片2选择，1：选择
+#define LCD_CS2_PORT		GPIOE
 #define LCD_CS2_CLK			RCC_APB2Periph_GPIOE
 #define LCD_CS2_INIT		LCD_CS2_PORT,LCD_CS2_PIN
 
-#define LCD_CS1_PIN			GPIO_Pin_8	//芯片2选择，1：选择
-#define LCD_CS1_PORT		GPIOD
+#define LCD_CS1_PIN			GPIO_Pin_9	//芯片2选择，1：选择
+#define LCD_CS1_PORT		GPIOE
 #define LCD_CS1_CLK			RCC_APB2Periph_GPIOE
 #define LCD_CS1_INIT		LCD_CS1_PORT,LCD_CS1_PIN
 
-#define LCD_E_PIN   		GPIO_Pin_7	//使能，0：使能，1：失能
+#define LCD_E_PIN   		GPIO_Pin_12	//使能，0：使能，1：失能
 #define LCD_E_PORT			GPIOE
 #define LCD_E_CLK				RCC_APB2Periph_GPIOE
 #define LCD_E_INIT			LCD_E_PORT,LCD_E_PIN
 
-#define LCD_RW_PIN			GPIO_Pin_1	//读写信号，0：写，1：读
-#define	LCD_RW_PORT			GPIOD
+#define LCD_RW_PIN			GPIO_Pin_13	//读写信号，0：写，1：读
+#define	LCD_RW_PORT			GPIOE
 #define LCD_RW_CLK			RCC_APB2Periph_GPIOE
 #define LCD_RW_INIT			LCD_RW_PORT,LCD_RW_PIN
 
-#define LCD_RS_PIN			GPIO_Pin_0	//数据指令选择信号，0：指令，1：数据
+#define LCD_RS_PIN			GPIO_Pin_8	//数据指令选择信号，0：指令，1：数据
 #define LCD_RS_PORT			GPIOD
 #define LCD_RS_CLK			RCC_APB2Periph_GPIOD
 #define LCD_RS_INIT			LCD_RS_PORT,LCD_RS_PIN
 
 //以下为数据线
-#define LCD_DATA0_PIN		GPIO_Pin_8	//
+#define LCD_DATA0_PIN		GPIO_Pin_10	//
 #define	LCD_DATA0_PORT	GPIOE
 #define LCD_DATA0_CLK		RCC_APB2Periph_GPIOE
 #define LCD_DATA0_INIT	LCD_DATA0_PORT,LCD_DATA0_PIN
 
-#define LCD_DATA1_PIN		GPIO_Pin_9	//
+#define LCD_DATA1_PIN		GPIO_Pin_8	//
 #define	LCD_DATA1_PORT	GPIOE
 #define LCD_DATA1_CLK		RCC_APB2Periph_GPIOE
 #define LCD_DATA1_INIT	LCD_DATA1_PORT,LCD_DATA1_PIN
 
-#define LCD_DATA2_PIN		GPIO_Pin_10	//
-#define	LCD_DATA2_PORT	GPIOE
-#define LCD_DATA2_CLK		RCC_APB2Periph_GPIOE
+#define LCD_DATA2_PIN		GPIO_Pin_1	//
+#define	LCD_DATA2_PORT	GPIOD
+#define LCD_DATA2_CLK		RCC_APB2Periph_GPIOD
 #define LCD_DATA2_INIT	LCD_DATA2_PORT,LCD_DATA2_PIN
 
-#define LCD_DATA3_PIN		GPIO_Pin_11	//
-#define	LCD_DATA3_PORT	GPIOE
-#define LCD_DATA3_CLK		RCC_APB2Periph_GPIOE
+#define LCD_DATA3_PIN		GPIO_Pin_15	//
+#define	LCD_DATA3_PORT	GPIOD
+#define LCD_DATA3_CLK		RCC_APB2Periph_GPIOD
 #define LCD_DATA3_INIT	LCD_DATA3_PORT,LCD_DATA3_PIN
 
-#define LCD_DATA4_PIN		GPIO_Pin_12	//
-#define	LCD_DATA4_PORT	GPIOE
-#define LCD_DATA4_CLK		RCC_APB2Periph_GPIOE
+#define LCD_DATA4_PIN		GPIO_Pin_9	//
+#define	LCD_DATA4_PORT	GPIOD
+#define LCD_DATA4_CLK		RCC_APB2Periph_GPIOD
 #define LCD_DATA4_INIT	LCD_DATA4_PORT,LCD_DATA4_PIN
 
-#define LCD_DATA5_PIN		GPIO_Pin_13	//
+#define LCD_DATA5_PIN		GPIO_Pin_15	//
 #define	LCD_DATA5_PORT	GPIOE
 #define LCD_DATA5_CLK		RCC_APB2Periph_GPIOE
 #define LCD_DATA5_INIT	LCD_DATA5_PORT,LCD_DATA5_PIN
 
-#define LCD_DATA6_PIN		GPIO_Pin_14	//
+#define LCD_DATA6_PIN		GPIO_Pin_13	//
 #define	LCD_DATA6_PORT	GPIOE
 #define LCD_DATA6_CLK		RCC_APB2Periph_GPIOE
 #define LCD_DATA6_INIT	LCD_DATA6_PORT,LCD_DATA6_PIN
 
-#define LCD_DATA7_PIN		GPIO_Pin_15	//
+#define LCD_DATA7_PIN		GPIO_Pin_11	//
 #define	LCD_DATA7_PORT	GPIOE
 #define LCD_DATA7_CLK		RCC_APB2Periph_GPIOE
 #define LCD_DATA7_INIT	LCD_DATA7_PORT,LCD_DATA7_PIN
