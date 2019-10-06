@@ -1,0 +1,18 @@
+--cpu Cortex-M3
+".\objects\delay.o"
+".\objects\fifo.o"
+".\objects\sys.o"
+".\objects\usart1.o"
+".\objects\main.o"
+".\objects\74hc595.o"
+".\objects\digital_tube.o"
+".\objects\misc.o"
+".\objects\stm32f10x_gpio.o"
+".\objects\stm32f10x_rcc.o"
+".\objects\stm32f10x_usart.o"
+".\objects\startup_stm32f10x_hd.o"
+".\objects\system_stm32f10x.o"
+--strict --scatter ".\Objects\DIGITAL_TUBE.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\DIGITAL_TUBE.map" -o .\Objects\DIGITAL_TUBE.axf
