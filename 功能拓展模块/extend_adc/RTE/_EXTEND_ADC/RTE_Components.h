@@ -3,7 +3,7 @@
  * Auto generated Run-Time-Environment Configuration File
  *      *** Do not modify ! ***
  *
- * Project: 'extend_adc' 
+ * Project: 'EXTEND_ADC' 
  * Target:  'EXTEND_ADC' 
  */
 

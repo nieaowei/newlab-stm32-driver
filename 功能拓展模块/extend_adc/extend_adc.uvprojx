@@ -48,14 +48,14 @@
             <NotGenerated>0</NotGenerated>
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
-          <OutputDirectory>.\</OutputDirectory>
-          <OutputName>extend_adc</OutputName>
+          <OutputDirectory>.\Objects\</OutputDirectory>
+          <OutputName>EXTEND_ADC</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
-          <ListingPath>.\</ListingPath>
+          <ListingPath>.\Listings\</ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
           <CreateBatchFile>0</CreateBatchFile>
@@ -410,22 +410,27 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>PCF8591</GroupName>
-          <Files>
-            <File>
-              <FileName>pcf8591.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\USER\SRC\pcf8591.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
           <GroupName>USART</GroupName>
           <Files>
             <File>
               <FileName>usart1.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\USER\USART\usart1.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>EXTEND_ADC</GroupName>
+          <Files>
+            <File>
+              <FileName>extend_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USER\SRC\extend_adc.c</FilePath>
+            </File>
+            <File>
+              <FileName>iic.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USER\SRC\iic.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -480,7 +485,7 @@
       </component>
     </components>
     <files>
-      <file attr="config" category="header" name="RTE_Driver\Config\RTE_Device.h" version="0.0.0">
+      <file attr="config" category="header" name="RTE_Driver\Config\RTE_Device.h" version="1.1.2">
         <instance index="0">RTE\Device\STM32F103VE\RTE_Device.h</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="STM32F1xx CMSIS"/>
         <package name="STM32F1xx_DFP" schemaVersion="1.4.0" url="http://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
@@ -488,7 +493,7 @@
           <targetInfo name="EXTEND_ADC"/>
         </targetInfos>
       </file>
-      <file attr="config" category="source" condition="STM32F1xx HD ARMCC" name="Device\Source\ARM\startup_stm32f10x_hd.s" version="0.0.0">
+      <file attr="config" category="source" condition="STM32F1xx HD ARMCC" name="Device\Source\ARM\startup_stm32f10x_hd.s" version="1.0.0">
         <instance index="0">RTE\Device\STM32F103VE\startup_stm32f10x_hd.s</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="STM32F1xx CMSIS"/>
         <package name="STM32F1xx_DFP" schemaVersion="1.4.0" url="http://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
@@ -496,7 +501,7 @@
           <targetInfo name="EXTEND_ADC"/>
         </targetInfos>
       </file>
-      <file attr="config" category="source" name="Device\StdPeriph_Driver\templates\stm32f10x_conf.h" version="0.0.0">
+      <file attr="config" category="source" name="Device\StdPeriph_Driver\templates\stm32f10x_conf.h" version="3.5.0">
         <instance index="0">RTE\Device\STM32F103VE\stm32f10x_conf.h</instance>
         <component Cclass="Device" Cgroup="StdPeriph Drivers" Csub="Framework" Cvendor="Keil" Cversion="3.5.1" condition="STM32F1xx STDPERIPH"/>
         <package name="STM32F1xx_DFP" schemaVersion="1.4.0" url="http://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
@@ -504,7 +509,7 @@
           <targetInfo name="EXTEND_ADC"/>
         </targetInfos>
       </file>
-      <file attr="config" category="source" name="Device\Source\system_stm32f10x.c" version="0.0.0">
+      <file attr="config" category="source" name="Device\Source\system_stm32f10x.c" version="1.0.0">
         <instance index="0">RTE\Device\STM32F103VE\system_stm32f10x.c</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="STM32F1xx CMSIS"/>
         <package name="STM32F1xx_DFP" schemaVersion="1.4.0" url="http://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
