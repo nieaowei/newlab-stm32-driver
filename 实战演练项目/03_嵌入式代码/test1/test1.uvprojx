@@ -412,6 +412,11 @@
               <FileType>1</FileType>
               <FilePath>.\USER\USART\usart3.c</FilePath>
             </File>
+            <File>
+              <FileName>uart5.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USER\USART\uart5.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -537,6 +542,11 @@
               <FileType>1</FileType>
               <FilePath>.\USER\SRC\digital_tube.c</FilePath>
             </File>
+            <File>
+              <FileName>timer7.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USER\SRC\timer7.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -566,6 +576,16 @@
               <FileName>lcd12864.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\USER\SRC\lcd12864.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>AS608</GroupName>
+          <Files>
+            <File>
+              <FileName>as608.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USER\SRC\as608.c</FilePath>
             </File>
           </Files>
         </Group>

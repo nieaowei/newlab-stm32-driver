@@ -23,6 +23,9 @@
 #define	LIGHT_CH	ADC_Channel_11
 #define TEMP_CH		ADC_Channel_10
 
+uint8_t temp_value;
+
+
 /*
 	ntc热敏电阻参考值
 */

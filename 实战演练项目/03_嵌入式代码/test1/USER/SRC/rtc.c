@@ -5,8 +5,9 @@
 #include "temp_light.h"
 #include "WiFiToCloud.h"
 #include "relay.h"
-#include "hal_uart4.h"
+#include "uart4.h"
 #include "lcd12864.h"
+#include "uart5.h"
 //Mini STM32开发板
 //RTC实时时钟 驱动代码			 
 //正点原子@ALIENTEK
@@ -31,22 +32,11 @@ static void RTC_NVIC_Config(void)
 //其他:错误代码
 extern  uint8_t door_status;
 extern  uint8_t latern_status;
+//extern uint8_t cloud_process();
 
-void rtc_irq_process(){
-	
-	uint8_t temp=GetTemp();
-	
-	ESP8266_SendSensor("temp_value",temp,"");
-	printf("temp: %d \r\n",temp);
-	/*
-	ESP8266_SendSensor("door_status",door_status,"");
-	
-	ESP8266_SendSensor("latern_status",latern_status,"");
-	
-	printf("door_status:%d\r\n",door_status);
-	printf("latern_status:%d\r\n",latern_status);
-	*/
-}
+
+
+
 
 u8 RTC_Init(u16 syear,u8 smon,u8 sday,u8 hour,u8 min,u8 sec,u8 check)
 {
@@ -92,6 +82,8 @@ u8 RTC_Init(u16 syear,u8 smon,u8 sday,u8 hour,u8 min,u8 sec,u8 check)
 //RTC时钟中断
 //每秒触发一次  
 //extern u16 tcnt; 
+
+//extern void digital_tube_process();
 void RTC_IRQHandler(void)
 {		 
 	uint8_t date[8];
@@ -99,13 +91,36 @@ void RTC_IRQHandler(void)
 	if (RTC_GetITStatus(RTC_IT_SEC) != RESET)//秒钟中断
 	{							
 		RTC_Get();//更新时间
-		rtc_irq_process();
-		sprintf(data,"temp:%d",GetTemp());
-		lcd_clr();
-		lcd_writeLenthChar(0,0,data,strlen(data));
+		//digital_tube_process();
+		
+		char temp[8];
+		uint8_t lengh;
+		sprintf(temp,"temp:%d",temp_value);
+		lengh=strlen(temp);
+		lcd_writeLenthChar(0,0,temp,lengh);
+		if(door_status==1){
+			sprintf(temp,"door:open");
+			lcd_writeLenthChar(1,0,temp,strlen(temp));
+		}else{
+			sprintf(temp,"door:close");
+			lcd_writeLenthChar(1,0,temp,strlen(temp));
+		}
+		if(latern_status==1){
+			sprintf(temp,"latern:open");
+			lcd_writeLenthChar(2,0,temp,strlen(temp));
+		}else{
+			sprintf(temp,"latern:close");
+			lcd_writeLenthChar(2,0,temp,strlen(temp));
+		}
+
+		
+		//UART5_SendBytes("you are pig\r\n",strlen("you are pig\r\n"));
+		
  	}
 	if(RTC_GetITStatus(RTC_IT_ALR)!= RESET)//闹钟中断
 	{
+		
+		
 		RTC_ClearITPendingBit(RTC_IT_ALR);		//清闹钟中断	  	
 	  RTC_Get();				//更新时间   
   	printf("Alarm Time:%d-%d-%d %d:%d:%d\n",calendar.w_year,calendar.w_month,calendar.w_date,calendar.hour,calendar.min,calendar.sec);//输出闹铃时间	

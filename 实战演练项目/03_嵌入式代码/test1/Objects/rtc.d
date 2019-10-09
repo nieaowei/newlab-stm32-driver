@@ -28,8 +28,10 @@
 .\objects\rtc.o: .\USER\INC\temp_light.h
 .\objects\rtc.o: .\USER\WiFiToCloud\WiFiToCloud.h
 .\objects\rtc.o: .\USER\WiFiToCloud\HAL_WiFiToCloud.h
-.\objects\rtc.o: .\USER\INC\hal_uart4.h
+.\objects\rtc.o: .\USER\USART\uart4.h
+.\objects\rtc.o: .\USER\SYSTEM\fifo.h
 .\objects\rtc.o: .\USER\WiFiToCloud\WiFiToCloud.h
 .\objects\rtc.o: .\USER\WiFiToCloud\CloudReference.h
 .\objects\rtc.o: .\USER\INC\relay.h
 .\objects\rtc.o: .\USER\INC\lcd12864.h
+.\objects\rtc.o: .\USER\USART\uart5.h

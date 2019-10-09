@@ -24,6 +24,7 @@
 .\objects\wifitocloud.o: C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h
 .\objects\wifitocloud.o: USER\WiFiToCloud\WiFiToCloud.h
 .\objects\wifitocloud.o: USER\WiFiToCloud\HAL_WiFiToCloud.h
-.\objects\wifitocloud.o: .\USER\INC\hal_uart4.h
+.\objects\wifitocloud.o: .\USER\USART\uart4.h
+.\objects\wifitocloud.o: .\USER\SYSTEM\fifo.h
 .\objects\wifitocloud.o: USER\WiFiToCloud\WiFiToCloud.h
 .\objects\wifitocloud.o: USER\WiFiToCloud\CloudReference.h

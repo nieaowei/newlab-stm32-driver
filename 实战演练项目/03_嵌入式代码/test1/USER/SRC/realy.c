@@ -14,8 +14,8 @@
 #define DOOR_PORT 		GPIOB
 #define DOOR_PIN			GPIO_Pin_5
 
-#define LATERN_CLK			RCC_APB2Periph_GPIOB
-#define LATERN_PORT 		GPIOB
+#define LATERN_CLK			RCC_APB2Periph_GPIOD
+#define LATERN_PORT 		GPIOD
 #define LATERN_PIN			GPIO_Pin_3
 
 /*
@@ -53,7 +53,7 @@ void Relay_Init(void){
 	
 	GPIO_InitTypeDef relay;
 	
-	RCC_APB2PeriphClockCmd(DOOR_CLK,ENABLE);
+	RCC_APB2PeriphClockCmd(DOOR_CLK|LATERN_CLK,ENABLE);
 	
 	relay.GPIO_Mode=GPIO_Mode_Out_PP;
 	relay.GPIO_Pin=DOOR_PIN;
@@ -63,7 +63,7 @@ void Relay_Init(void){
 	
 	relay.GPIO_Pin=LATERN_PIN;
 	
-	GPIO_Init(DOOR_PORT,&relay);
+	GPIO_Init(LATERN_PORT,&relay);
 	
 	GPIO_ResetBits(DOOR_PORT,DOOR_PIN);
 	GPIO_ResetBits(LATERN_PORT,LATERN_PIN);

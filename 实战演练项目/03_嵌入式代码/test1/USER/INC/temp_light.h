@@ -14,5 +14,6 @@ uint8_t GetTemp(void);
 uint8_t GetLight();
 void TEMP_LIGHT_Init(void);
 
+extern uint8_t temp_value;
 #endif
 
