@@ -81,7 +81,7 @@ void IIC_enableRead(void){
   *	@retval	void
 ****************************************************************/
 void IIC_Start(void){
-	enableWrite();
+	IIC_enableWrite();
 	SDAW(1);
 	SCL(1);
 	delay_us(IIC_RATE);
@@ -100,7 +100,7 @@ void IIC_Start(void){
   *	@retval	
 ****************************************************************/
 void IIC_Stop(void){
-	enableWrite();
+	IIC_enableWrite();
 	SCL(0);
 	SDAW(0);
 	delay_us(IIC_RATE);
@@ -121,7 +121,7 @@ void IIC_Stop(void){
 ****************************************************************/
 void IIC_Ack(void){
 	SCL(0);
-	enableWrite();
+	IIC_enableWrite();
 	SDAW(0);
 	delay_us(IIC_RATE);
 	SCL(1);
@@ -141,7 +141,7 @@ void IIC_Ack(void){
 ****************************************************************/
 void IIC_NAck(void){
 	SCL(0);
-	enableWrite();
+	IIC_enableWrite();
 	SDAW(1);
 	delay_us(IIC_RATE);
 	SCL(1);

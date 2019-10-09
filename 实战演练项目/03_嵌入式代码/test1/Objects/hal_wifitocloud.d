@@ -22,8 +22,9 @@
 .\objects\hal_wifitocloud.o: C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h
 .\objects\hal_wifitocloud.o: C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h
 .\objects\hal_wifitocloud.o: C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h
+.\objects\hal_wifitocloud.o: .\USER\USART\uart4.h
+.\objects\hal_wifitocloud.o: .\USER\SYSTEM\fifo.h
 .\objects\hal_wifitocloud.o: USER\WiFiToCloud\WiFiToCloud.h
 .\objects\hal_wifitocloud.o: USER\WiFiToCloud\HAL_WiFiToCloud.h
-.\objects\hal_wifitocloud.o: .\USER\INC\hal_uart4.h
 .\objects\hal_wifitocloud.o: USER\WiFiToCloud\WiFiToCloud.h
 .\objects\hal_wifitocloud.o: USER\WiFiToCloud\CloudReference.h

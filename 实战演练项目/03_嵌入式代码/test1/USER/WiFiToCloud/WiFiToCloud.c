@@ -31,10 +31,20 @@
 *******************************************************************/
 int8_t ESP8266_SetStation(void)
 {
-	ClrAtRxBuf();//清空缓存
+	//ClrAtRxBuf();//清空缓存
+	uint8_t temp[50];
 	SendAtCmd((uint8_t *)AT_CWMODE,strlen(AT_CWMODE));
-	delay_ms(100);
-	if(strstr((const char *)AT_RX_BUF, (const char *)"OK") == NULL)
+	delay_ms(200);
+	//printf("%c",uart4_rx_fifo.data[uart4_rx_fifo.in]);
+	FIFO_Out_Bytes(&uart4_rx_fifo,temp);
+	printf("res1: %s \r\n",temp);
+	FIFO_Out_Bytes(&uart4_rx_fifo,temp);
+	printf("res2: %s \r\n",temp);
+	memset(temp,0,50);
+	FIFO_Out_Bytes(&uart4_rx_fifo,temp);
+	//memset(temp,0,50);
+	printf("res3: %s \r\n",temp);
+	if(strstr((const char *)temp, (const char *)"OK") == NULL)
 	{
 		return -1;
 	}
@@ -52,14 +62,30 @@ int8_t ESP8266_SetStation(void)
 *******************************************************************/
 int8_t ESP8266_SetAP(char *wifi, char *pwd)
 {
+	uint8_t temp[50];
 	uint8_t AtCwjap[MAX_AT_TX_LEN];
 	memset(AtCwjap, 0x00, MAX_AT_TX_LEN);//清空缓存
-	ClrAtRxBuf();//清空缓存
+	//ClrAtRxBuf();//清空缓存
 	sprintf((char *)AtCwjap,"AT+CWJAP_CUR=\"%s\",\"%s\"",wifi, pwd);
 //	printf("%s\r\n",AtCwjap);////////////////////////////////////////////////////////////
 	SendAtCmd((uint8_t *)AtCwjap,strlen((const char *)AtCwjap));
 	delay_ms(5500);
-	if(strstr((const char *)AT_RX_BUF, (const char *)"OK") == NULL)
+	
+	FIFO_Out_Bytes(&uart4_rx_fifo,temp);
+	printf("ap1 : %s \r\n",temp);
+	FIFO_Out_Bytes(&uart4_rx_fifo,temp);
+	printf("ap2 : %s \r\n",temp);
+	FIFO_Out_Bytes(&uart4_rx_fifo,temp);
+	printf("ap3 : %s \r\n",temp);
+		FIFO_Out_Bytes(&uart4_rx_fifo,temp);
+	printf("ap4 : %s \r\n",temp);
+		FIFO_Out_Bytes(&uart4_rx_fifo,temp);
+	printf("ap5 : %s \r\n",temp);
+		FIFO_Out_Bytes(&uart4_rx_fifo,temp);
+	printf("ap6 : %s \r\n",temp);
+	//FIFO_Out_Bytes(&uart4_rx_fifo,temp);
+	//printf("ap7 : %s \r\n",temp);
+	if(strstr((const char *)temp, (const char *)"OK") == NULL)
 	{
 		return -1;
 	}
@@ -81,12 +107,18 @@ int8_t ESP8266_IpStart(char *IpAddr, uint16_t port)
 {
 	uint8_t IpStart[MAX_AT_TX_LEN];
 	memset(IpStart, 0x00, MAX_AT_TX_LEN);//清空缓存
-	ClrAtRxBuf();//清空缓存
+	//ClrAtRxBuf();//清空缓存
 	sprintf((char *)IpStart,"AT+CIPSTART=\"TCP\",\"%s\",%d",IpAddr, port);
 	//printf("%s\r\n",IpStart);////////////////////////////////////////////////////////////
 	SendAtCmd((uint8_t *)IpStart,strlen((const char *)IpStart));
 	delay_ms(1500);
-	if(strstr((const char *)AT_RX_BUF, (const char *)"OK") == NULL)
+	uint8_t temp[50];
+	FIFO_Out_Bytes(&uart4_rx_fifo,temp);
+	FIFO_Out_Bytes(&uart4_rx_fifo,temp);
+	FIFO_Out_Bytes(&uart4_rx_fifo,temp);
+	FIFO_Out_Bytes(&uart4_rx_fifo,temp);
+	printf("server:%s\r\n",temp);
+	if(strstr((const char *)temp, (const char *)"OK") == NULL)
 	{
 		return -1;
 	}
@@ -110,21 +142,28 @@ int8_t ESP8266_IpSend(char *IpBuf, uint8_t len)
 	int8_t error = 0;
 	uint8_t IpSend[MAX_AT_TX_LEN];
 	memset(IpSend, 0x00, MAX_AT_TX_LEN);//清空缓存
-	ClrAtRxBuf();//清空缓存
+	//ClrAtRxBuf();//清空缓存
 	sprintf((char *)IpSend,"AT+CIPSEND=%d",len);
 	//printf("%s\r\n",IpSend);////////////////////////////////////////////////////////////
 	SendAtCmd((uint8_t *)IpSend,strlen((const char *)IpSend));
 	delay_ms(3);
-	if(strstr((const char *)AT_RX_BUF, (const char *)"OK") == NULL)
+	uint8_t temp[30];
+	FIFO_Out_Bytes(&uart4_rx_fifo,temp);
+	FIFO_Out_Bytes(&uart4_rx_fifo,temp);
+	FIFO_Out_Bytes(&uart4_rx_fifo,temp);
+	printf("send:%s\r\n",temp);
+	if(strstr((const char *)temp, (const char *)"OK") == NULL)
 	{
 		return -1;
 	}
-	ClrAtRxBuf();//清空缓存
+	//ClrAtRxBuf();//清空缓存
 	SendStrLen((uint8_t *)IpBuf, len);
 	//printf("%s\r\n",IpBuf);////////////////////////////////////////////////////////////
-	for(TryGo = 0; TryGo<60; TryGo++)//最多等待时间100*60=6000ms
+	for(TryGo = 0; TryGo<6; TryGo++)//最多等待时间100*60=6000ms
 	{
-		if(strstr((const char *)AT_RX_BUF, (const char *)"SEND OK") == NULL)
+		FIFO_Out_Bytes(&uart4_rx_fifo,temp);
+		printf("tyr:%s\r\n",temp);
+		if(strstr((const char *)temp, (const char *)"SEND OK") == NULL)
 		{
 			error = -2;
 		}
@@ -151,10 +190,11 @@ int8_t ConnectToServer(char *DeviceID, char *SecretKey)
 {
 	uint16_t TryGo = 0;
 	int8_t error = 0;
+	uint8_t temp[128];
 	uint8_t TxetBuf[MAX_AT_TX_LEN];
 	memset(TxetBuf,0x00,MAX_AT_TX_LEN);//清空缓存
 	printf("设置WiFi通讯模块工作模式\r\n");
-	//LCD_WriteEnglishString(4,0,(unsigned char *)"Set WiFi Station");//                
+//	LCD_WriteEnglishString(4,0,(unsigned char *)"Set WiFi Station");//                
 	for(TryGo = 0; TryGo<3; TryGo++)
 	{
 		if(ESP8266_SetStation() == 0)//设置WiFi通讯模块工作模式
@@ -172,7 +212,7 @@ int8_t ConnectToServer(char *DeviceID, char *SecretKey)
 		return error;
 	}
 	printf("设置热点名称和密码\r\n");
-	//LCD_WriteEnglishString(4,0,(unsigned char *)"Connect To WiFi ");//                
+//	LCD_WriteEnglishString(4,0,(unsigned char *)"Connect To WiFi ");//                
 	for(TryGo = 0; TryGo<3; TryGo++)
 	{
 		if(ESP8266_SetAP((char *)WIFI_AP, (char *)WIFI_PWD) == 0)//设置热点名称和密码
@@ -190,7 +230,7 @@ int8_t ConnectToServer(char *DeviceID, char *SecretKey)
 		return error;
 	}
 	printf("连接服务器\r\n");
-	//LCD_WriteEnglishString(4,0,(unsigned char *)"ConnectToServer ");//                
+//	LCD_WriteEnglishString(4,0,(unsigned char *)"ConnectToServer ");//                
 	for(TryGo = 0; TryGo<3; TryGo++)
 	{
 		if(ESP8266_IpStart((char *)SERVER_IP,SERVER_PORT) == 0)//连接服务器IP地址，端口：120.77.58.34,8600
@@ -210,7 +250,7 @@ int8_t ConnectToServer(char *DeviceID, char *SecretKey)
 	
 	sprintf((char *)TxetBuf,"{\"t\":1,\"device\":\"%s\",\"key\":\"%s\",\"ver\":\"v0.0.0.0\"}",DeviceID,SecretKey);
 	printf("握手认证：%s\r\n",TxetBuf);
-	//LCD_WriteEnglishString(4,0,(unsigned char *)"Authenticating  ");//                
+//	LCD_WriteEnglishString(4,0,(unsigned char *)"Authenticating  ");//                
 	if(ESP8266_IpSend((char *)TxetBuf, strlen((char *)TxetBuf)) < 0)
 	{//发送失败
 		error=-4;
@@ -219,7 +259,10 @@ int8_t ConnectToServer(char *DeviceID, char *SecretKey)
 	{//发送成功
 		for(TryGo = 0; TryGo<500; TryGo++)//最多等待时间500*10=5000ms
 		{
-			if(strstr((const char *)AT_RX_BUF, (const char *)"\"status\":0") == NULL)//检查响应状态是否为握手成功
+			//uint8_t temp[128];
+			FIFO_Out_Bytes(&uart4_rx_fifo,temp);
+			printf("woshou: %s\r\n",temp);
+			if(strstr((const char *)temp, (const char *)"\"status\":0") == NULL)//检查响应状态是否为握手成功
 			{
 				error = -5;
 			}
@@ -264,7 +307,9 @@ int8_t ESP8266_SendSensor(char *ApiTag, uint32_t sensor, char *TimeStr)
 	{//发送成功
 		for(TryGo = 0; TryGo<50; TryGo++)//最多等待时间50*10=500ms
 		{
-			if(strstr((const char *)AT_RX_BUF, (const char *)"\"status\":0") == NULL)//检查响应状态是否为"上报成功"
+			uint8_t temp[128];
+	FIFO_Out_Bytes(&uart4_rx_fifo,temp);
+			if(strstr((const char *)temp, (const char *)"\"status\":0") == NULL)//检查响应状态是否为"上报成功"
 			{
 				error = -1;
 			}
@@ -309,7 +354,9 @@ SendAgain:
 	{//发送成功
 		for(TryGo = 0; TryGo<50; TryGo++)//最多等待时间50*10=500ms
 		{
-			if(strstr((const char *)AT_RX_BUF, (const char *)"\"status\":0") == NULL)//检查响应状态是否为"上报成功"
+			uint8_t temp[128];
+	FIFO_Out_Bytes(&uart4_rx_fifo,temp);
+			if(strstr((const char *)temp, (const char *)"\"status\":0") == NULL)//检查响应状态是否为"上报成功"
 			{
 				error = -1;
 			}

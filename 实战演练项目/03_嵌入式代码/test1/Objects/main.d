@@ -26,7 +26,7 @@
 .\objects\main.o: .\USER\SYSTEM\delay.h
 .\objects\main.o: .\USER\WiFiToCloud\WiFiToCloud.h
 .\objects\main.o: .\USER\WiFiToCloud\HAL_WiFiToCloud.h
-.\objects\main.o: .\USER\INC\hal_uart4.h
+.\objects\main.o: .\USER\USART\uart4.h
 .\objects\main.o: .\USER\WiFiToCloud\WiFiToCloud.h
 .\objects\main.o: .\USER\WiFiToCloud\CloudReference.h
 .\objects\main.o: .\USER\INC\lcd12864.h
@@ -36,3 +36,7 @@
 .\objects\main.o: .\USER\INC\relay.h
 .\objects\main.o: .\USER\INC\temp_light.h
 .\objects\main.o: .\USER\INC\key.h
+.\objects\main.o: .\USER\INC\timer.h
+.\objects\main.o: .\USER\INC\lf125k.h
+.\objects\main.o: .\USER\USART\uart5.h
+.\objects\main.o: .\USER\INC\timer7.h
