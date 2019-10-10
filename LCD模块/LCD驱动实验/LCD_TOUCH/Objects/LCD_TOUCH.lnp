@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+".\objects\delay.o"
+".\objects\fifo.o"
+".\objects\sys.o"
+".\objects\usart1.o"
+".\objects\main.o"
+".\objects\glcd_fonts.o"
+".\objects\glcd_mcbstm32e.o"
+".\objects\glcd_mcbstm32ex.o"
+".\objects\lcd_x.o"
+".\objects\touch_xpt2046.o"
+".\objects\misc.o"
+".\objects\stm32f10x_exti.o"
+".\objects\stm32f10x_fsmc.o"
+".\objects\stm32f10x_gpio.o"
+".\objects\stm32f10x_rcc.o"
+".\objects\stm32f10x_usart.o"
+".\objects\startup_stm32f10x_hd.o"
+".\objects\system_stm32f10x.o"
+--strict --scatter ".\Objects\LCD_TOUCH.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\LCD_TOUCH.map" -o .\Objects\LCD_TOUCH.axf

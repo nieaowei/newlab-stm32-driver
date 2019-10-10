@@ -121,18 +121,9 @@ void door_process(){
 
 
 void cloud_process(){
-	uint8_t IpData[128];
-	uint8_t temp[128];
-	if(uart4_receiving==0){
-		FIFO_Out_Bytes(&uart4_rx_fifo,temp);
-		ESP8266_GetIpData((uint8_t *)temp, (char *)IpData);
-		ESP8266_DataAnalysisProcess((char *)IpData);
-		memset(IpData,0,128);
-		//ClrAtRxBuf();
-	}
 	
-	
-	if(cloud_counter>3000){
+	if(cloud_counter>2000){
+		
 		printf("cloud process\r\n");
 		temp_value=GetTemp();
 		ESP8266_SendSensor("door_status",door_status,"");

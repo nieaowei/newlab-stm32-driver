@@ -14,8 +14,8 @@
 #ifndef _CloudReference_h_
 #define _CloudReference_h_
 
-#define WIFI_AP		"Interneting"//WiFi热点名称
-#define WIFI_PWD	"wlwsys6688"//WiFi密码
+#define WIFI_AP		"nieaowei"//WiFi热点名称
+#define WIFI_PWD	"1234567890"//WiFi密码
 #define SERVER_IP	"120.77.58.34"	//服务器IP地址
 #define SERVER_PORT	8600			//服务器端口号
 

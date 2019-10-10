@@ -14,9 +14,9 @@
 #define DOOR_PORT 		GPIOB
 #define DOOR_PIN			GPIO_Pin_5
 
-#define LATERN_CLK			RCC_APB2Periph_GPIOD
-#define LATERN_PORT 		GPIOD
-#define LATERN_PIN			GPIO_Pin_3
+#define LATERN_CLK			RCC_APB2Periph_GPIOA
+#define LATERN_PORT 		GPIOA
+#define LATERN_PIN			GPIO_Pin_14
 
 /*
 	寄存器操作或者库函数操作，后面实验不再提供两种方案

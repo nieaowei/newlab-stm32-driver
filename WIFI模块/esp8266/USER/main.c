@@ -26,6 +26,7 @@ int main(){
 	while(1){
 		FIFO_Out_Bytes(&uart4_rx_fifo,temp);
 		printf("main:%s\r\n",temp);
+		ESP8266_DataAnalysisProcess(temp);
 		memset(temp,0,128);
 		delay_ms(1000);
 	}

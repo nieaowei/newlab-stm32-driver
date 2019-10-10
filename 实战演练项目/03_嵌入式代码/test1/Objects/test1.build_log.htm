@@ -5,7 +5,7 @@
 <h2>Tool Versions:</h2>
 IDE-Version: μVision V5.28.0.0
 Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: q 1, 1, LIC=76FRA-1FA6G-6QP0X-H9Q7Z-34TUS-NCSYB
+License Information: 1 1, 1, LIC=KRMZ9-4E17L-TGD7T-R7FXD-XXRR2-ZJULQ
  
 Tool Versions:
 Toolchain:       MDK-ARM Plus  Version: 5.28.0.0
@@ -21,24 +21,33 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.6.0
 Dialog DLL:      TCM.DLL V1.36.2.0
  
 <h2>Project:</h2>
-Z:\newlab-stm32-driver\实战演练项目\03_嵌入式代码\test1\test1.uvprojx
+C:\Users\nieaowei\Desktop\window\newlab-stm32-driver\实战演练项目\03_嵌入式代码\test1\test1.uvprojx
 Project File Date:  10/09/2019
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'TEST1'
-compiling uart4.c...
+compiling realy.c...
+.\USER\INC\relay.h(16): warning:  #1295-D: Deprecated declaration latern_ON - give arg types
+  void latern_ON();
+.\USER\INC\relay.h(17): warning:  #1295-D: Deprecated declaration latern_OFF - give arg types
+  void latern_OFF();
+USER\SRC\realy.c(78): warning:  #188-D: enumerated type mixed with another type
+  	DOOR_TOGGLE;
+USER\SRC\realy.c(115): warning:  #1-D: last line of file ends without a newline
+  }
+USER\SRC\realy.c: 4 warnings, 0 errors
 linking...
-Program Size: Code=15152 RO-data=984 RW-data=3652 ZI-data=3716  
-".\Objects\test1.axf" - 0 Error(s), 0 Warning(s).
+Program Size: Code=14788 RO-data=984 RW-data=3652 ZI-data=3716  
+".\Objects\test1.axf" - 0 Error(s), 4 Warning(s).
 
 <h2>Software Packages used:</h2>
 
 Package Vendor: ARM
-                http://www.keil.com/pack/ARM.CMSIS.5.5.1.pack
-                ARM.CMSIS.5.5.1
+                http://www.keil.com/pack/ARM.CMSIS.5.6.0.pack
+                ARM.CMSIS.5.6.0
                 CMSIS (Cortex Microcontroller Software Interface Standard)
-   * Component: CORE Version: 5.2.0
+   * Component: CORE Version: 5.3.0
 
 Package Vendor: Keil
                 http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.3.0.pack
@@ -58,18 +67,18 @@ Package Vendor: Keil
 <h2>Collection of Component include folders:</h2>
   .\RTE\Device\STM32F103VE
   .\RTE\_TEST1
-  C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include
+  C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include
   C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include
   C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc
 
 <h2>Collection of Component Files used:</h2>
 
-   * Component: ARM::CMSIS:CORE:5.2.0
+   * Component: ARM::CMSIS:CORE:5.3.0
 
    * Component: Keil::Device:Startup:1.0.0
-      Source file:   Device\Source\ARM\startup_stm32f10x_hd.s
       Source file:   Device\Source\system_stm32f10x.c
       Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+      Source file:   Device\Source\ARM\startup_stm32f10x_hd.s
       Include file:  RTE_Driver\Config\RTE_Device.h
 
    * Component: Keil::Device:StdPeriph Drivers:ADC:3.5.0
@@ -77,19 +86,19 @@ Package Vendor: Keil
       Source file:   Device\StdPeriph_Driver\src\stm32f10x_adc.c
 
    * Component: Keil::Device:StdPeriph Drivers:BKP:3.5.0
-      Source file:   Device\StdPeriph_Driver\src\stm32f10x_bkp.c
       Include file:  Device\StdPeriph_Driver\inc\stm32f10x_bkp.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_bkp.c
 
    * Component: Keil::Device:StdPeriph Drivers:Framework:3.5.1
+      Include file:  Device\StdPeriph_Driver\inc\misc.h
       Source file:   Device\StdPeriph_Driver\templates\stm32f10x_conf.h
       Include file:  Device\StdPeriph_Driver\templates\stm32f10x_it.h
-      Include file:  Device\StdPeriph_Driver\inc\misc.h
       Source file:   Device\StdPeriph_Driver\src\misc.c
       Source file:   Device\StdPeriph_Driver\templates\stm32f10x_it.c
 
    * Component: Keil::Device:StdPeriph Drivers:GPIO:3.5.0
-      Source file:   Device\StdPeriph_Driver\src\stm32f10x_gpio.c
       Include file:  Device\StdPeriph_Driver\inc\stm32f10x_gpio.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_gpio.c
 
    * Component: Keil::Device:StdPeriph Drivers:PWR:3.5.0
       Include file:  Device\StdPeriph_Driver\inc\stm32f10x_pwr.h

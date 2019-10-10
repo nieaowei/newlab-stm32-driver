@@ -90,8 +90,8 @@ uint16_t FIFO_Out_Bytes(FIFO_Type *FIFO,Byte *byte){
 		if(FIFO_Out_Byte(FIFO,&current)==FIFO_OP_FAIL){
 			return FIFO_OP_FAIL;
 		}else{
-			if(former==0x0d && current==0x0a){
-				byte[length-1]='\0';
+			if((former==0x0d && current==0x0a )||(former=='}' && current==0x0d)){
+				byte[length]='\0';
 				return length;
 			}
 			byte[length++]=current;

@@ -18,7 +18,18 @@
 #include "WiFiToCloud.h"
 
 
-
+uint8_t wait_result(const char *result,uint16_t timeout){
+	uint8_t temp[128];
+	while(timeout--){
+		FIFO_Out_Bytes(&uart4_rx_fifo,temp);
+		//printf("res2: %s \r\n",temp);
+		if(strstr((const char*)temp,result)!=NULL){
+			return 0;
+		}
+		delay_ms(1);
+	}
+	return 1;
+}
 
 /*******************************************************************
 *函数：int8_t ESP8266_SetStation(void)
@@ -36,16 +47,22 @@ int8_t ESP8266_SetStation(void)
 	SendAtCmd((uint8_t *)AT_CWMODE,strlen(AT_CWMODE));
 	delay_ms(200);
 	//printf("%c",uart4_rx_fifo.data[uart4_rx_fifo.in]);
-	FIFO_Out_Bytes(&uart4_rx_fifo,temp);
-	printf("res1: %s \r\n",temp);
-	FIFO_Out_Bytes(&uart4_rx_fifo,temp);
-	printf("res2: %s \r\n",temp);
-	memset(temp,0,50);
-	FIFO_Out_Bytes(&uart4_rx_fifo,temp);
+	//FIFO_Out_Bytes(&uart4_rx_fifo,temp);
+	//printf("res1: %s \r\n",temp);
+	
 	//memset(temp,0,50);
-	printf("res3: %s \r\n",temp);
-	if(strstr((const char *)temp, (const char *)"OK") == NULL)
-	{
+	//FIFO_Out_Bytes(&uart4_rx_fifo,temp);
+	//printf("res2: %s \r\n",temp);
+	
+	//memset(temp,0,50);
+	//FIFO_Out_Bytes(&uart4_rx_fifo,temp);
+	//memset(temp,0,50);
+	//printf("res3: %s \r\n",temp);
+	//if(strstr((const char *)temp, (const char *)"OK") == NULL)
+	//{
+		//return -1;
+	//}
+	if(wait_result("OK",1000)){
 		return -1;
 	}
 	return 0;
@@ -67,26 +84,8 @@ int8_t ESP8266_SetAP(char *wifi, char *pwd)
 	memset(AtCwjap, 0x00, MAX_AT_TX_LEN);//清空缓存
 	//ClrAtRxBuf();//清空缓存
 	sprintf((char *)AtCwjap,"AT+CWJAP_CUR=\"%s\",\"%s\"",wifi, pwd);
-//	printf("%s\r\n",AtCwjap);////////////////////////////////////////////////////////////
 	SendAtCmd((uint8_t *)AtCwjap,strlen((const char *)AtCwjap));
-	delay_ms(5500);
-	
-	FIFO_Out_Bytes(&uart4_rx_fifo,temp);
-	printf("ap1 : %s \r\n",temp);
-	FIFO_Out_Bytes(&uart4_rx_fifo,temp);
-	printf("ap2 : %s \r\n",temp);
-	FIFO_Out_Bytes(&uart4_rx_fifo,temp);
-	printf("ap3 : %s \r\n",temp);
-		FIFO_Out_Bytes(&uart4_rx_fifo,temp);
-	printf("ap4 : %s \r\n",temp);
-		FIFO_Out_Bytes(&uart4_rx_fifo,temp);
-	printf("ap5 : %s \r\n",temp);
-		FIFO_Out_Bytes(&uart4_rx_fifo,temp);
-	printf("ap6 : %s \r\n",temp);
-	//FIFO_Out_Bytes(&uart4_rx_fifo,temp);
-	//printf("ap7 : %s \r\n",temp);
-	if(strstr((const char *)temp, (const char *)"OK") == NULL)
-	{
+	if(wait_result((const char*)"OK",5500)){
 		return -1;
 	}
 	return 0;
@@ -111,14 +110,8 @@ int8_t ESP8266_IpStart(char *IpAddr, uint16_t port)
 	sprintf((char *)IpStart,"AT+CIPSTART=\"TCP\",\"%s\",%d",IpAddr, port);
 	//printf("%s\r\n",IpStart);////////////////////////////////////////////////////////////
 	SendAtCmd((uint8_t *)IpStart,strlen((const char *)IpStart));
-	delay_ms(1500);
-	uint8_t temp[50];
-	FIFO_Out_Bytes(&uart4_rx_fifo,temp);
-	FIFO_Out_Bytes(&uart4_rx_fifo,temp);
-	FIFO_Out_Bytes(&uart4_rx_fifo,temp);
-	FIFO_Out_Bytes(&uart4_rx_fifo,temp);
-	printf("server:%s\r\n",temp);
-	if(strstr((const char *)temp, (const char *)"OK") == NULL)
+	
+	if(wait_result("OK",1500))
 	{
 		return -1;
 	}
@@ -146,13 +139,8 @@ int8_t ESP8266_IpSend(char *IpBuf, uint8_t len)
 	sprintf((char *)IpSend,"AT+CIPSEND=%d",len);
 	//printf("%s\r\n",IpSend);////////////////////////////////////////////////////////////
 	SendAtCmd((uint8_t *)IpSend,strlen((const char *)IpSend));
-	delay_ms(3);
-	uint8_t temp[30];
-	FIFO_Out_Bytes(&uart4_rx_fifo,temp);
-	FIFO_Out_Bytes(&uart4_rx_fifo,temp);
-	FIFO_Out_Bytes(&uart4_rx_fifo,temp);
-	printf("send:%s\r\n",temp);
-	if(strstr((const char *)temp, (const char *)"OK") == NULL)
+	
+	if(wait_result("OK",500))
 	{
 		return -1;
 	}
@@ -161,10 +149,8 @@ int8_t ESP8266_IpSend(char *IpBuf, uint8_t len)
 	//printf("%s\r\n",IpBuf);////////////////////////////////////////////////////////////
 	for(TryGo = 0; TryGo<60; TryGo++)//最多等待时间100*60=6000ms
 	{
-		//uint8_t temp[20];
-		FIFO_Out_Bytes(&uart4_rx_fifo,temp);
-		printf("tyr:%s\r\n",temp);
-		if(strstr((const char *)temp, (const char *)"SEND OK") == NULL)
+		
+		if(wait_result("SEND OK",200) == NULL)
 		{
 			error = -2;
 		}
@@ -259,10 +245,7 @@ int8_t ConnectToServer(char *DeviceID, char *SecretKey)
 	{//发送成功
 		for(TryGo = 0; TryGo<500; TryGo++)//最多等待时间500*10=5000ms
 		{
-			uint8_t temp[128];
-			FIFO_Out_Bytes(&uart4_rx_fifo,temp);
-			printf("woshou: %s\r\n",temp);
-			if(strstr((const char *)temp, (const char *)"\"status\":0") == NULL)//检查响应状态是否为握手成功
+			if(wait_result((const char *)"\"status\":0",10))//检查响应状态是否为握手成功
 			{
 				error = -5;
 			}
@@ -271,7 +254,6 @@ int8_t ConnectToServer(char *DeviceID, char *SecretKey)
 				error = 0;
 				break;
 			}
-			delay_ms(10);
 		}
 	}
 	
@@ -309,7 +291,7 @@ int8_t ESP8266_SendSensor(char *ApiTag, uint32_t sensor, char *TimeStr)
 		{
 			uint8_t temp[128];
 	FIFO_Out_Bytes(&uart4_rx_fifo,temp);
-			if(strstr((const char *)temp, (const char *)"\"status\":0") == NULL)//检查响应状态是否为"上报成功"
+			if(wait_result((const char *)"\"status\":0",10))//检查响应状态是否为"上报成功"
 			{
 				error = -1;
 			}
@@ -318,7 +300,7 @@ int8_t ESP8266_SendSensor(char *ApiTag, uint32_t sensor, char *TimeStr)
 				error = 0;
 				break;
 			}
-			delay_ms(10);
+			//delay_ms(10);
 		}
 	}
 	return error;
@@ -356,7 +338,7 @@ SendAgain:
 		{
 			uint8_t temp[128];
 	FIFO_Out_Bytes(&uart4_rx_fifo,temp);
-			if(strstr((const char *)temp, (const char *)"\"status\":0") == NULL)//检查响应状态是否为"上报成功"
+			if(wait_result((const char *)"\"status\":0",10))//检查响应状态是否为"上报成功"
 			{
 				error = -1;
 			}
@@ -423,11 +405,12 @@ void ESP8266_DataAnalysisProcess(char *RxBuf)
 	}
 	else if(strstr((const char *)RxBuf, (const char *)"\"t\":5") != NULL)//命令请求？
 	{
-		if(strstr((const char *)RxBuf, (const char *)"\"apitag\":\"ctrl\"") != NULL)//开锁请求
+		if(strstr((const char *)RxBuf, (const char *)"\"apitag\":\"latern_cmd\"") != NULL)//开锁请求
 		{
 			if((strstr((const char *)RxBuf, (const char *)"\"data\":1") != NULL))//开锁
 			{
 				ESP8266_IpSend((char *)PING_RSP, strlen((const char *)PING_RSP));//响应心跳
+				printf("open latern\r\n");
 			}
 		}
 		else if(strstr((const char *)RxBuf, (const char *)"\"apitag\":\"defense\"") != NULL)//布防/撤防请求

@@ -20,7 +20,7 @@
 
 //接收缓存队列以及接收标志
 FIFO_Type uart4_rx_fifo;
-uint8_t 	uart4_receiving;
+uint8_t 	uart4_receiving=1;
 /***************************************************************
   *	@brief	串口三的相关io和外设的初始化
   *	@param	void
@@ -54,7 +54,7 @@ void uart4_init(){
 	
 	//中断参数配置
 	uart4_it.NVIC_IRQChannel=UART4_IRQn;
-	uart4_it.NVIC_IRQChannelSubPriority=2;
+	uart4_it.NVIC_IRQChannelSubPriority=0;
 	uart4_it.NVIC_IRQChannelPreemptionPriority=1;
 	uart4_it.NVIC_IRQChannelCmd=ENABLE;
 	
@@ -74,19 +74,25 @@ void uart4_init(){
   *	@param	void
   *	@retval	void
 ****************************************************************/
+
+
+
 void UART4_IRQHandler(void){
 	static uint8_t former=0;
 	static uint8_t current=0;
+	uint8_t temp[128];
 	if(USART_GetITStatus(UART4,USART_IT_RXNE)){
+		//uart4_receiving=1;
 		former=current;
 		current=USART_ReceiveData(UART4);
 		FIFO_In_Byte(&uart4_rx_fifo,current);
 		//printf("%c",current);
-		if(former==0x0d && current==0x0a){
+		if((former==0x0d && current==0x0a)||(former=='}' && current==0x0d)){
 			uart4_receiving=0;
-			
+			//FIFO_Out_Bytes(&uart4_rx_fifo,temp);
+			//printf("temp:%s \r\n",temp);
 		}else{
-			uart4_receiving=1;
+			//uart4_receiving=1;
 		}
 	}
 }

@@ -563,9 +563,9 @@
               <FilePath>.\USER\WiFiToCloud\WiFiToCloud.c</FilePath>
             </File>
             <File>
-              <FileName>hal_uart4.c</FileName>
+              <FileName>uart4.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\USER\SRC\hal_uart4.c</FilePath>
+              <FilePath>.\USER\USART\uart4.c</FilePath>
             </File>
           </Files>
         </Group>
