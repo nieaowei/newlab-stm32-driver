@@ -1,193 +1,135 @@
 Dependencies for Project 'XFVOICE_USART', Target 'XFVOICE_USART': (DO NOT MODIFY !)
-F (.\USER\SYSTEM\delay.c)(0x5D383492)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\USER\USART -I .\USER\SYSTEM -I .\USER\INC-I.\RTE\Device\STM32F103VE-I.\RTE\_XFVOICE_USART-IC:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IC:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_HD-o .\objects\delay.o --omf_browse .\objects\delay.crf --depend .\objects\delay.d)
-I (USER\SYSTEM\delay.h)(0x5D3FE2A5)
-I (USER\SYSTEM\sys.h)(0x5D356AE4)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include\stm32f10x.h)(0x5825386C)
-I (.\RTE\_XFVOICE_USART\RTE_Components.h)(0x5D3834CC)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C8F4DD4)
+F (.\USER\SYSTEM\delay.c)(0x5D9DE170)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\USER\USART -I .\USER\SYSTEM -I .\USER\INC-I.\RTE\Device\STM32F103VE-I.\RTE\_XFVOICE_USART-IC:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_HD-o .\objects\delay.o --omf_browse .\objects\delay.crf --depend .\objects\delay.d)
+I (USER\SYSTEM\delay.h)(0x5D9DE170)
+I (USER\SYSTEM\sys.h)(0x5D9DE170)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x5825386C)
+I (.\RTE\_XFVOICE_USART\RTE_Components.h)(0x5D9DE170)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm3.h)(0x5D2590B6)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B971444)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8F4DD4)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armcc.h)(0x5C8F4DD4)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include\system_stm32f10x.h)(0x5825386C)
-I (.\RTE\Device\STM32F103VE\stm32f10x_conf.h)(0x5D3834CC)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\misc.h)(0x52F9EB20)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D2590B6)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D2590B6)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D2590B6)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x5825386C)
+I (.\RTE\Device\STM32F103VE\stm32f10x_conf.h)(0x5D9DE170)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52F9EB20)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52F9EB20)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52F9EB20)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52F9EB20)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
-F (.\USER\SYSTEM\fifo.c)(0x5D3FE673)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\USER\USART -I .\USER\SYSTEM -I .\USER\INC-I.\RTE\Device\STM32F103VE-I.\RTE\_XFVOICE_USART-IC:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IC:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_HD-o .\objects\fifo.o --omf_browse .\objects\fifo.crf --depend .\objects\fifo.d)
-I (USER\SYSTEM\fifo.h)(0x5D3FE709)
+F (.\USER\SYSTEM\fifo.c)(0x5D9DE170)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\USER\USART -I .\USER\SYSTEM -I .\USER\INC-I.\RTE\Device\STM32F103VE-I.\RTE\_XFVOICE_USART-IC:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_HD-o .\objects\fifo.o --omf_browse .\objects\fifo.crf --depend .\objects\fifo.d)
+I (USER\SYSTEM\fifo.h)(0x5D9DE170)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
-F (.\USER\SYSTEM\sys.c)(0x5D356AE4)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\USER\USART -I .\USER\SYSTEM -I .\USER\INC-I.\RTE\Device\STM32F103VE-I.\RTE\_XFVOICE_USART-IC:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IC:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_HD-o .\objects\sys.o --omf_browse .\objects\sys.crf --depend .\objects\sys.d)
-I (USER\SYSTEM\sys.h)(0x5D356AE4)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include\stm32f10x.h)(0x5825386C)
-I (.\RTE\_XFVOICE_USART\RTE_Components.h)(0x5D3834CC)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C8F4DD4)
+F (.\USER\SYSTEM\sys.c)(0x5D9DE170)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\USER\USART -I .\USER\SYSTEM -I .\USER\INC-I.\RTE\Device\STM32F103VE-I.\RTE\_XFVOICE_USART-IC:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_HD-o .\objects\sys.o --omf_browse .\objects\sys.crf --depend .\objects\sys.d)
+I (USER\SYSTEM\sys.h)(0x5D9DE170)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x5825386C)
+I (.\RTE\_XFVOICE_USART\RTE_Components.h)(0x5D9DE170)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm3.h)(0x5D2590B6)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B971444)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8F4DD4)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armcc.h)(0x5C8F4DD4)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include\system_stm32f10x.h)(0x5825386C)
-I (.\RTE\Device\STM32F103VE\stm32f10x_conf.h)(0x5D3834CC)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\misc.h)(0x52F9EB20)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D2590B6)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D2590B6)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D2590B6)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x5825386C)
+I (.\RTE\Device\STM32F103VE\stm32f10x_conf.h)(0x5D9DE170)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52F9EB20)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52F9EB20)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52F9EB20)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52F9EB20)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
-F (.\USER\main.c)(0x5D429B91)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\USER\USART -I .\USER\SYSTEM -I .\USER\INC-I.\RTE\Device\STM32F103VE-I.\RTE\_XFVOICE_USART-IC:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IC:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_HD-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
-I (.\USER\USART\usart3.h)(0x5D42784E)
+F (.\USER\main.c)(0x5D9DE170)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\USER\USART -I .\USER\SYSTEM -I .\USER\INC-I.\RTE\Device\STM32F103VE-I.\RTE\_XFVOICE_USART-IC:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_HD-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (.\USER\USART\usart1.c)(0x5D9DE170)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\USER\USART -I .\USER\SYSTEM -I .\USER\INC-I.\RTE\Device\STM32F103VE-I.\RTE\_XFVOICE_USART-IC:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_HD-o .\objects\usart1.o --omf_browse .\objects\usart1.crf --depend .\objects\usart1.d)
+I (USER\USART\usart1.h)(0x5D9DE170)
+I (.\USER\SYSTEM\sys.h)(0x5D9DE170)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x5825386C)
+I (.\RTE\_XFVOICE_USART\RTE_Components.h)(0x5D9DE170)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm3.h)(0x5D2590B6)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
-I (.\USER\SYSTEM\fifo.h)(0x5D3FE709)
-I (.\USER\SYSTEM\delay.h)(0x5D3FE2A5)
-I (.\USER\SYSTEM\sys.h)(0x5D356AE4)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include\stm32f10x.h)(0x5825386C)
-I (.\RTE\_XFVOICE_USART\RTE_Components.h)(0x5D3834CC)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C8F4DD4)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B971444)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8F4DD4)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armcc.h)(0x5C8F4DD4)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include\system_stm32f10x.h)(0x5825386C)
-I (.\RTE\Device\STM32F103VE\stm32f10x_conf.h)(0x5D3834CC)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\misc.h)(0x52F9EB20)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D2590B6)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D2590B6)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D2590B6)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x5825386C)
+I (.\RTE\Device\STM32F103VE\stm32f10x_conf.h)(0x5D9DE170)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52F9EB20)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52F9EB20)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52F9EB20)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52F9EB20)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
-I (.\USER\INC\xfs5152ce.h)(0x5D427C4E)
-I (.\USER\USART\usart1.h)(0x5D3FE6A4)
-F (.\USER\USART\usart1.c)(0x5D3FE368)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\USER\USART -I .\USER\SYSTEM -I .\USER\INC-I.\RTE\Device\STM32F103VE-I.\RTE\_XFVOICE_USART-IC:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IC:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_HD-o .\objects\usart1.o --omf_browse .\objects\usart1.crf --depend .\objects\usart1.d)
-I (USER\USART\usart1.h)(0x5D3FE6A4)
-I (.\USER\SYSTEM\sys.h)(0x5D356AE4)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include\stm32f10x.h)(0x5825386C)
-I (.\RTE\_XFVOICE_USART\RTE_Components.h)(0x5D3834CC)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C8F4DD4)
+I (.\USER\SYSTEM\fifo.h)(0x5D9DE170)
+F (.\USER\USART\usart3.c)(0x00000000)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\USER\USART -I .\USER\SYSTEM -I .\USER\INC-I.\RTE\Device\STM32F103VE-I.\RTE\_XFVOICE_USART-IC:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_HD-o .\objects\usart3.o --omf_browse .\objects\usart3.crf --depend .\objects\usart3.d)
+F (.\USER\SRC\xfs5152ce.c)(0x5D9DE170)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\USER\USART -I .\USER\SYSTEM -I .\USER\INC-I.\RTE\Device\STM32F103VE-I.\RTE\_XFVOICE_USART-IC:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_HD-o .\objects\xfs5152ce.o --omf_browse .\objects\xfs5152ce.crf --depend .\objects\xfs5152ce.d)
+I (.\USER\INC\xfs5152ce.h)(0x5D9DE170)
+F (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\src\misc.c)(0x52F9EB20)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\USER\USART -I .\USER\SYSTEM -I .\USER\INC-I.\RTE\Device\STM32F103VE-I.\RTE\_XFVOICE_USART-IC:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_HD-o .\objects\misc.o --omf_browse .\objects\misc.crf --depend .\objects\misc.d)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52F9EB20)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x5825386C)
+I (.\RTE\_XFVOICE_USART\RTE_Components.h)(0x5D9DE170)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm3.h)(0x5D2590B6)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B971444)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8F4DD4)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armcc.h)(0x5C8F4DD4)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include\system_stm32f10x.h)(0x5825386C)
-I (.\RTE\Device\STM32F103VE\stm32f10x_conf.h)(0x5D3834CC)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\misc.h)(0x52F9EB20)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
-I (.\USER\SYSTEM\fifo.h)(0x5D3FE709)
-F (.\USER\USART\usart3.c)(0x5D4278E6)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\USER\USART -I .\USER\SYSTEM -I .\USER\INC-I.\RTE\Device\STM32F103VE-I.\RTE\_XFVOICE_USART-IC:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IC:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_HD-o .\objects\usart3.o --omf_browse .\objects\usart3.crf --depend .\objects\usart3.d)
-I (USER\USART\usart3.h)(0x5D42784E)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D2590B6)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D2590B6)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D2590B6)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x5825386C)
+I (.\RTE\Device\STM32F103VE\stm32f10x_conf.h)(0x5D9DE170)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52F9EB20)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52F9EB20)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52F9EB20)
+F (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\src\stm32f10x_gpio.c)(0x52F9EB20)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\USER\USART -I .\USER\SYSTEM -I .\USER\INC-I.\RTE\Device\STM32F103VE-I.\RTE\_XFVOICE_USART-IC:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_HD-o .\objects\stm32f10x_gpio.o --omf_browse .\objects\stm32f10x_gpio.crf --depend .\objects\stm32f10x_gpio.d)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52F9EB20)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x5825386C)
+I (.\RTE\_XFVOICE_USART\RTE_Components.h)(0x5D9DE170)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm3.h)(0x5D2590B6)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
-I (.\USER\SYSTEM\fifo.h)(0x5D3FE709)
-I (.\USER\SYSTEM\sys.h)(0x5D356AE4)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include\stm32f10x.h)(0x5825386C)
-I (.\RTE\_XFVOICE_USART\RTE_Components.h)(0x5D3834CC)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C8F4DD4)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B971444)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8F4DD4)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armcc.h)(0x5C8F4DD4)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include\system_stm32f10x.h)(0x5825386C)
-I (.\RTE\Device\STM32F103VE\stm32f10x_conf.h)(0x5D3834CC)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\misc.h)(0x52F9EB20)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
-F (.\USER\SRC\xfs5152ce.c)(0x5D427C99)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\USER\USART -I .\USER\SYSTEM -I .\USER\INC-I.\RTE\Device\STM32F103VE-I.\RTE\_XFVOICE_USART-IC:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IC:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_HD-o .\objects\xfs5152ce.o --omf_browse .\objects\xfs5152ce.crf --depend .\objects\xfs5152ce.d)
-I (.\USER\INC\xfs5152ce.h)(0x5D427C4E)
-I (.\USER\USART\usart3.h)(0x5D42784E)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D2590B6)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D2590B6)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D2590B6)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x5825386C)
+I (.\RTE\Device\STM32F103VE\stm32f10x_conf.h)(0x5D9DE170)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52F9EB20)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52F9EB20)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52F9EB20)
+F (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\src\stm32f10x_rcc.c)(0x52F9EB20)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\USER\USART -I .\USER\SYSTEM -I .\USER\INC-I.\RTE\Device\STM32F103VE-I.\RTE\_XFVOICE_USART-IC:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_HD-o .\objects\stm32f10x_rcc.o --omf_browse .\objects\stm32f10x_rcc.crf --depend .\objects\stm32f10x_rcc.d)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52F9EB20)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x5825386C)
+I (.\RTE\_XFVOICE_USART\RTE_Components.h)(0x5D9DE170)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm3.h)(0x5D2590B6)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
-I (.\USER\SYSTEM\fifo.h)(0x5D3FE709)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (.\USER\SYSTEM\delay.h)(0x5D3FE2A5)
-I (.\USER\SYSTEM\sys.h)(0x5D356AE4)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include\stm32f10x.h)(0x5825386C)
-I (.\RTE\_XFVOICE_USART\RTE_Components.h)(0x5D3834CC)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C8F4DD4)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B971444)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8F4DD4)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armcc.h)(0x5C8F4DD4)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include\system_stm32f10x.h)(0x5825386C)
-I (.\RTE\Device\STM32F103VE\stm32f10x_conf.h)(0x5D3834CC)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\misc.h)(0x52F9EB20)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
-F (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\src\misc.c)(0x52F9EB20)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\USER\USART -I .\USER\SYSTEM -I .\USER\INC-I.\RTE\Device\STM32F103VE-I.\RTE\_XFVOICE_USART-IC:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IC:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_HD-o .\objects\misc.o --omf_browse .\objects\misc.crf --depend .\objects\misc.d)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\misc.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include\stm32f10x.h)(0x5825386C)
-I (.\RTE\_XFVOICE_USART\RTE_Components.h)(0x5D3834CC)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C8F4DD4)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D2590B6)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D2590B6)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D2590B6)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x5825386C)
+I (.\RTE\Device\STM32F103VE\stm32f10x_conf.h)(0x5D9DE170)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52F9EB20)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52F9EB20)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52F9EB20)
+F (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\src\stm32f10x_usart.c)(0x52F9EB20)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\USER\USART -I .\USER\SYSTEM -I .\USER\INC-I.\RTE\Device\STM32F103VE-I.\RTE\_XFVOICE_USART-IC:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_HD-o .\objects\stm32f10x_usart.o --omf_browse .\objects\stm32f10x_usart.crf --depend .\objects\stm32f10x_usart.d)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52F9EB20)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x5825386C)
+I (.\RTE\_XFVOICE_USART\RTE_Components.h)(0x5D9DE170)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm3.h)(0x5D2590B6)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B971444)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8F4DD4)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armcc.h)(0x5C8F4DD4)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include\system_stm32f10x.h)(0x5825386C)
-I (.\RTE\Device\STM32F103VE\stm32f10x_conf.h)(0x5D3834CC)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52F9EB20)
-F (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\src\stm32f10x_gpio.c)(0x52F9EB20)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\USER\USART -I .\USER\SYSTEM -I .\USER\INC-I.\RTE\Device\STM32F103VE-I.\RTE\_XFVOICE_USART-IC:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IC:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_HD-o .\objects\stm32f10x_gpio.o --omf_browse .\objects\stm32f10x_gpio.crf --depend .\objects\stm32f10x_gpio.d)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include\stm32f10x.h)(0x5825386C)
-I (.\RTE\_XFVOICE_USART\RTE_Components.h)(0x5D3834CC)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C8F4DD4)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D2590B6)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D2590B6)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D2590B6)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x5825386C)
+I (.\RTE\Device\STM32F103VE\stm32f10x_conf.h)(0x5D9DE170)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52F9EB20)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52F9EB20)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52F9EB20)
+F (RTE\Device\STM32F103VE\RTE_Device.h)(0x5D9DE170)()
+F (RTE\Device\STM32F103VE\startup_stm32f10x_hd.s)(0x5D9DE170)(--cpu Cortex-M3 -g --apcs=interwork -I.\RTE\Device\STM32F103VE-I.\RTE\_XFVOICE_USART-IC:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc--pd "__UVISION_VERSION SETA 528" --pd "_RTE_ SETA 1" --pd "STM32F10X_HD SETA 1"--list .\listings\startup_stm32f10x_hd.lst --xref -o .\objects\startup_stm32f10x_hd.o --depend .\objects\startup_stm32f10x_hd.d)
+F (RTE\Device\STM32F103VE\stm32f10x_conf.h)(0x5D9DE170)()
+F (RTE\Device\STM32F103VE\system_stm32f10x.c)(0x5D9DE170)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\USER\USART -I .\USER\SYSTEM -I .\USER\INC-I.\RTE\Device\STM32F103VE-I.\RTE\_XFVOICE_USART-IC:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_HD-o .\objects\system_stm32f10x.o --omf_browse .\objects\system_stm32f10x.crf --depend .\objects\system_stm32f10x.d)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x5825386C)
+I (.\RTE\_XFVOICE_USART\RTE_Components.h)(0x5D9DE170)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm3.h)(0x5D2590B6)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B971444)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8F4DD4)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armcc.h)(0x5C8F4DD4)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include\system_stm32f10x.h)(0x5825386C)
-I (.\RTE\Device\STM32F103VE\stm32f10x_conf.h)(0x5D3834CC)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\misc.h)(0x52F9EB20)
-F (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\src\stm32f10x_rcc.c)(0x52F9EB20)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\USER\USART -I .\USER\SYSTEM -I .\USER\INC-I.\RTE\Device\STM32F103VE-I.\RTE\_XFVOICE_USART-IC:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IC:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_HD-o .\objects\stm32f10x_rcc.o --omf_browse .\objects\stm32f10x_rcc.crf --depend .\objects\stm32f10x_rcc.d)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include\stm32f10x.h)(0x5825386C)
-I (.\RTE\_XFVOICE_USART\RTE_Components.h)(0x5D3834CC)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C8F4DD4)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B971444)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8F4DD4)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armcc.h)(0x5C8F4DD4)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include\system_stm32f10x.h)(0x5825386C)
-I (.\RTE\Device\STM32F103VE\stm32f10x_conf.h)(0x5D3834CC)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\misc.h)(0x52F9EB20)
-F (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\src\stm32f10x_usart.c)(0x52F9EB20)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\USER\USART -I .\USER\SYSTEM -I .\USER\INC-I.\RTE\Device\STM32F103VE-I.\RTE\_XFVOICE_USART-IC:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IC:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_HD-o .\objects\stm32f10x_usart.o --omf_browse .\objects\stm32f10x_usart.crf --depend .\objects\stm32f10x_usart.d)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include\stm32f10x.h)(0x5825386C)
-I (.\RTE\_XFVOICE_USART\RTE_Components.h)(0x5D3834CC)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C8F4DD4)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B971444)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8F4DD4)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armcc.h)(0x5C8F4DD4)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include\system_stm32f10x.h)(0x5825386C)
-I (.\RTE\Device\STM32F103VE\stm32f10x_conf.h)(0x5D3834CC)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\misc.h)(0x52F9EB20)
-F (RTE\Device\STM32F103VE\RTE_Device.h)(0x5D3834CC)()
-F (RTE\Device\STM32F103VE\startup_stm32f10x_hd.s)(0x5825386C)(--cpu Cortex-M3 -g --apcs=interwork -I.\RTE\Device\STM32F103VE-I.\RTE\_XFVOICE_USART-IC:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IC:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc--pd "__UVISION_VERSION SETA 528" --pd "_RTE_ SETA 1" --pd "STM32F10X_HD SETA 1"--list .\listings\startup_stm32f10x_hd.lst --xref -o .\objects\startup_stm32f10x_hd.o --depend .\objects\startup_stm32f10x_hd.d)
-F (RTE\Device\STM32F103VE\stm32f10x_conf.h)(0x5D3834CC)()
-F (RTE\Device\STM32F103VE\system_stm32f10x.c)(0x5D3834CC)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\USER\USART -I .\USER\SYSTEM -I .\USER\INC-I.\RTE\Device\STM32F103VE-I.\RTE\_XFVOICE_USART-IC:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IC:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_HD-o .\objects\system_stm32f10x.o --omf_browse .\objects\system_stm32f10x.crf --depend .\objects\system_stm32f10x.d)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include\stm32f10x.h)(0x5825386C)
-I (.\RTE\_XFVOICE_USART\RTE_Components.h)(0x5D3834CC)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C8F4DD4)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B971444)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8F4DD4)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armcc.h)(0x5C8F4DD4)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include\system_stm32f10x.h)(0x5825386C)
-I (.\RTE\Device\STM32F103VE\stm32f10x_conf.h)(0x5D3834CC)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52F9EB20)
-I (C:\Users\nieao\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\misc.h)(0x52F9EB20)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D2590B6)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D2590B6)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D2590B6)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x5825386C)
+I (.\RTE\Device\STM32F103VE\stm32f10x_conf.h)(0x5D9DE170)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52F9EB20)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52F9EB20)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52F9EB20)
+I (C:\Users\nieaowei\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52F9EB20)
